@@ -300,7 +300,7 @@
 
     <xs:element name="Edition" type="TwoDigitNumber" minOccurs="0">
       <xs:annotation>
-        <xs:documentation>The edition number of the issue, as a two-digit number.</xs:documentation>
+        <xs:documentation>The edition or copy number of the issue, as a two-digit number.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
@@ -340,4 +340,5 @@
   </xs:element>
 
 </xs:schema>
+
 
