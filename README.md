@@ -95,7 +95,7 @@ Make sure this block is at the bottom of the file:
 if __name__ == "__main__":
     validate_xml_files(XSD_PATH, XML_DIR, LOG_FILE)
 
-## 🧩 Dependencies
+## 📦 Dependencies
 
 - Python 3.x
 - lxml package (Install with: pip install lxml)
