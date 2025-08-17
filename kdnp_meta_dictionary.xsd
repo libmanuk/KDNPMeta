@@ -1,0 +1,202 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Custom types -->
+  <xs:simpleType name="KDNPControlIdentifierType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{3}\d{10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TwoDigitNumber">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ThreeLowercaseLetters">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FourDigitYear">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RegionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Eastern Mountain Coal Fields"/>
+      <xs:enumeration value="Bluegrass"/>
+      <xs:enumeration value="Knobs"/>
+      <xs:enumeration value="Pennyrile"/>
+      <xs:enumeration value="Jackson Purchase"/>
+      <xs:enumeration value="Western Coal Fields"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CountyEnum">
+    <xs:restriction base="xs:string">
+      <!-- All 120 counties listed here -->
+      <xs:enumeration value="Adair"/>
+      <xs:enumeration value="Allen"/>
+      <xs:enumeration value="Anderson"/>
+      <xs:enumeration value="Ballard"/>
+      <xs:enumeration value="Bath"/>
+      <xs:enumeration value="Bell"/>
+      <xs:enumeration value="Boone"/>
+      <xs:enumeration value="Bourbon"/>
+      <xs:enumeration value="Boyd"/>
+      <xs:enumeration value="Boyle"/>
+      <xs:enumeration value="Bracken"/>
+      <xs:enumeration value="Breathitt"/>
+      <xs:enumeration value="Breckinridge"/>
+      <xs:enumeration value="Bullitt"/>
+      <xs:enumeration value="Butler"/>
+      <xs:enumeration value="Caldwell"/>
+      <xs:enumeration value="Calloway"/>
+      <xs:enumeration value="Campbell"/>
+      <xs:enumeration value="Carlisle"/>
+      <xs:enumeration value="Carroll"/>
+      <xs:enumeration value="Carter"/>
+      <xs:enumeration value="Casey"/>
+      <xs:enumeration value="Christian"/>
+      <xs:enumeration value="Clark"/>
+      <xs:enumeration value="Clay"/>
+      <xs:enumeration value="Clinton"/>
+      <xs:enumeration value="Crittenden"/>
+      <xs:enumeration value="Cumberland"/>
+      <xs:enumeration value="Daviess"/>
+      <xs:enumeration value="Edmonson"/>
+      <xs:enumeration value="Elliott"/>
+      <xs:enumeration value="Estill"/>
+      <xs:enumeration value="Fayette"/>
+      <xs:enumeration value="Fleming"/>
+      <xs:enumeration value="Floyd"/>
+      <xs:enumeration value="Franklin"/>
+      <xs:enumeration value="Fulton"/>
+      <xs:enumeration value="Gallatin"/>
+      <xs:enumeration value="Garrard"/>
+      <xs:enumeration value="Grant"/>
+      <xs:enumeration value="Graves"/>
+      <xs:enumeration value="Grayson"/>
+      <xs:enumeration value="Green"/>
+      <xs:enumeration value="Greenup"/>
+      <xs:enumeration value="Hancock"/>
+      <xs:enumeration value="Hardin"/>
+      <xs:enumeration value="Harlan"/>
+      <xs:enumeration value="Harrison"/>
+      <xs:enumeration value="Hart"/>
+      <xs:enumeration value="Henderson"/>
+      <xs:enumeration value="Henry"/>
+      <xs:enumeration value="Hickman"/>
+      <xs:enumeration value="Hopkins"/>
+      <xs:enumeration value="Jackson"/>
+      <xs:enumeration value="Jefferson"/>
+      <xs:enumeration value="Jessamine"/>
+      <xs:enumeration value="Johnson"/>
+      <xs:enumeration value="Kenton"/>
+      <xs:enumeration value="Knott"/>
+      <xs:enumeration value="Knox"/>
+      <xs:enumeration value="Larue"/>
+      <xs:enumeration value="Laurel"/>
+      <xs:enumeration value="Lawrence"/>
+      <xs:enumeration value="Lee"/>
+      <xs:enumeration value="Leslie"/>
+      <xs:enumeration value="Letcher"/>
+      <xs:enumeration value="Lewis"/>
+      <xs:enumeration value="Lincoln"/>
+      <xs:enumeration value="Livingston"/>
+      <xs:enumeration value="Logan"/>
+      <xs:enumeration value="Lyon"/>
+      <xs:enumeration value="Madison"/>
+      <xs:enumeration value="Magoffin"/>
+      <xs:enumeration value="Marion"/>
+      <xs:enumeration value="Marshall"/>
+      <xs:enumeration value="Martin"/>
+      <xs:enumeration value="Mason"/>
+      <xs:enumeration value="McCracken"/>
+      <xs:enumeration value="McCreary"/>
+      <xs:enumeration value="McLean"/>
+      <xs:enumeration value="Meade"/>
+      <xs:enumeration value="Menifee"/>
+      <xs:enumeration value="Mercer"/>
+      <xs:enumeration value="Metcalfe"/>
+      <xs:enumeration value="Monroe"/>
+      <xs:enumeration value="Montgomery"/>
+      <xs:enumeration value="Morgan"/>
+      <xs:enumeration value="Muhlenberg"/>
+      <xs:enumeration value="Nelson"/>
+      <xs:enumeration value="Nicholas"/>
+      <xs:enumeration value="Ohio"/>
+      <xs:enumeration value="Oldham"/>
+      <xs:enumeration value="Owen"/>
+      <xs:enumeration value="Owsley"/>
+      <xs:enumeration value="Pendleton"/>
+      <xs:enumeration value="Perry"/>
+      <xs:enumeration value="Pike"/>
+      <xs:enumeration value="Powell"/>
+      <xs:enumeration value="Pulaski"/>
+      <xs:enumeration value="Robertson"/>
+      <xs:enumeration value="Rockcastle"/>
+      <xs:enumeration value="Rowan"/>
+      <xs:enumeration value="Russell"/>
+      <xs:enumeration value="Scott"/>
+      <xs:enumeration value="Shelby"/>
+      <xs:enumeration value="Simpson"/>
+      <xs:enumeration value="Spencer"/>
+      <xs:enumeration value="Taylor"/>
+      <xs:enumeration value="Todd"/>
+      <xs:enumeration value="Trigg"/>
+      <xs:enumeration value="Trimble"/>
+      <xs:enumeration value="Union"/>
+      <xs:enumeration value="Warren"/>
+      <xs:enumeration value="Washington"/>
+      <xs:enumeration value="Wayne"/>
+      <xs:enumeration value="Webster"/>
+      <xs:enumeration value="Whitley"/>
+      <xs:enumeration value="Wolfe"/>
+      <xs:enumeration value="Woodford"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Root element -->
+  <xs:element name="newspaperissue">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="CollectionName" type="xs:string"/>
+        <xs:element name="Title" type="xs:string"/>
+        <xs:element name="Publisher" type="xs:string"/>
+        <xs:element name="Rights" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="Format" type="xs:string"/>
+        <xs:element name="Identifier" type="xs:string"/>
+        <xs:element name="LCCNLink" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="LCCNNumber" type="xs:string" minOccurs="0"/>
+        <xs:element name="KUDLAIPARKIdentifier" type="xs:string" minOccurs="0"/>
+        <xs:element name="KDNPTitleCode" type="ThreeLowercaseLetters"/>
+        <xs:element name="KDNPControlIdentifier" type="KDNPControlIdentifierType"/>
+        <xs:element name="Partners" type="xs:string" minOccurs="0"/>
+        <xs:element name="Funders" type="xs:string" minOccurs="0"/>
+        <xs:element name="Pages" type="xs:positiveInteger"/>
+        <xs:element name="Day" type="TwoDigitNumber"/>
+        <xs:element name="Month" type="TwoDigitNumber"/>
+        <xs:element name="Year" type="FourDigitYear"/>
+        <xs:element name="IssueDate" type="xs:date"/>
+        <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0"/>
+        <xs:element name="Decade" type="xs:string" minOccurs="0"/>
+        <xs:element name="County" type="CountyEnum" minOccurs="0"/>
+        <xs:element name="Region" type="RegionEnum" minOccurs="0"/>
+        <xs:element name="Edition" type="TwoDigitNumber" minOccurs="0"/>
+        <xs:element name="ThumbnailURL" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="ObjectURL" type="xs:anyURI"/>
+        <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0"/>
+        <xs:element name="SourceType" type="xs:string" minOccurs="0"/>
+        <xs:element name="PlaceofPublication" type="xs:string"/>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
