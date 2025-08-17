@@ -36,14 +36,14 @@ This Python script validates multiple XML files in a directory against a specifi
 ## 📁 File Structure and Paths
 
 - XSD Schema File
-- XSD_PATH
-- Path to the .xsd file used to validate XML files.
+  - XSD_PATH
+    - Path to the .xsd file used to validate XML files.
 - XML Files Directory
-- XML_DIR
-- Directory containing XML files to be validated.
+  - XML_DIR
+    - Directory containing XML files to be validated.
 - Validation Log File
-- LOG_FILE
-- Path where validation errors (if any) are written.
+  - LOG_FILE
+    - Path where validation errors (if any) are written.
 
 ## 🛠️ Function: validate_xml_files(xsd_path, xml_dir, log_file)
 Description:
