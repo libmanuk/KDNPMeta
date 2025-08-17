@@ -100,7 +100,7 @@ if __name__ == "__main__":
 - Python 3.x
 - lxml package (Install with: pip install lxml)
 
-## 🔐 Notes
+## ✅ Notes
 
 - File paths are Windows-specific (using raw strings r"...").
 - Ensure the XSD file is well-formed, or schema loading will fail.
