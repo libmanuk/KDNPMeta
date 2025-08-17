@@ -7,7 +7,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="Format">
+  <xs:element name="FormatType">
     <xs:simpleType>
       <xs:restriction base="xs:string">
         <xs:enumeration value="Newspaper issue"/>
@@ -174,13 +174,13 @@
     <xs:complexType>
       <xs:sequence>
 
-    <xs:element name="CollectionName" type="xs:string">
+    <xs:element name="CollectionName" type="xs:string" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The name of the collection to which this newspaper issue belongs.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Title" type="xs:string">
+    <xs:element name="Title" type="xs:string" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The title of the newspaper issue.</xs:documentation>
       </xs:annotation>
@@ -198,13 +198,13 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Format" type="Format">
+    <xs:element name="Format" type="FormatType" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The format of the resource ("Newspaper issue").</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Identifier" type="xs:string">
+    <xs:element name="Identifier" type="xs:string" minOccurs="1">
       <xs:annotation>
         <xs:documentation>A unique identifier for the newspaper issue.</xs:documentation>
       </xs:annotation>
@@ -228,13 +228,13 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="KDNPTitleCode" type="ThreeLowercaseLetters">
+    <xs:element name="KDNPTitleCode" type="ThreeLowercaseLetters" minOccurs="1">
       <xs:annotation>
         <xs:documentation>A three-letter lowercase code representing the KDNP title.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="KDNPControlIdentifier" type="KDNPControlIdentifierType">
+    <xs:element name="KDNPControlIdentifier" type="KDNPControlIdentifierType" minOccurs="1">
       <xs:annotation>
         <xs:documentation>A 13-character identifier with 3 lowercase letters followed by 10 digits.</xs:documentation>
       </xs:annotation>
@@ -276,19 +276,19 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="IssueDate" type="xs:date">
+    <xs:element name="IssueDate" type="xs:date" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The full date of the newspaper issue in YYYY-MM-DD format.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0">
+    <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The digital publication year, if different from the issue year.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Decade" type="xs:string" minOccurs="0">
+    <xs:element name="Decade" type="xs:string" minOccurs="0" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The decade during which the issue was published (e.g., "1920s").</xs:documentation>
       </xs:annotation>
@@ -306,25 +306,25 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Edition" type="TwoDigitNumber" minOccurs="0">
+    <xs:element name="Edition" type="TwoDigitNumber" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The edition or copy number of the issue, as a two-digit number.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="ThumbnailURL" type="xs:anyURI" minOccurs="0">
+    <xs:element name="ThumbnailURL" type="xs:anyURI" minOccurs="1">
       <xs:annotation>
         <xs:documentation>URL to a thumbnail image of the newspaper issue.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="ObjectURL" type="xs:anyURI">
+    <xs:element name="ObjectURL" type="xs:anyURI" minOccurs="1">
       <xs:annotation>
         <xs:documentation>URL to the main digital object of the newspaper issue.</xs:documentation>
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0">
+    <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0" minOccurs="1">
       <xs:annotation>
         <xs:documentation>URL to the full text of the newspaper issue, if available.</xs:documentation>
       </xs:annotation>
@@ -348,6 +348,7 @@
   </xs:element>
 
 </xs:schema>
+
 
 
 
