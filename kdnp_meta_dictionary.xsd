@@ -166,37 +166,178 @@
     <xs:complexType>
       <xs:sequence>
 
-        <xs:element name="CollectionName" type="xs:string"/>
-        <xs:element name="Title" type="xs:string"/>
-        <xs:element name="Publisher" type="xs:string"/>
-        <xs:element name="Rights" type="xs:anyURI" minOccurs="0"/>
-        <xs:element name="Format" type="xs:string"/>
-        <xs:element name="Identifier" type="xs:string"/>
-        <xs:element name="LCCNLink" type="xs:anyURI" minOccurs="0"/>
-        <xs:element name="LCCNNumber" type="xs:string" minOccurs="0"/>
-        <xs:element name="KUDLAIPARKIdentifier" type="xs:string" minOccurs="0"/>
-        <xs:element name="KDNPTitleCode" type="ThreeLowercaseLetters"/>
-        <xs:element name="KDNPControlIdentifier" type="KDNPControlIdentifierType"/>
-        <xs:element name="Partners" type="xs:string" minOccurs="0"/>
-        <xs:element name="Funders" type="xs:string" minOccurs="0"/>
-        <xs:element name="Pages" type="xs:positiveInteger"/>
-        <xs:element name="Day" type="TwoDigitNumber"/>
-        <xs:element name="Month" type="TwoDigitNumber"/>
-        <xs:element name="Year" type="FourDigitYear"/>
-        <xs:element name="IssueDate" type="xs:date"/>
-        <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0"/>
-        <xs:element name="Decade" type="xs:string" minOccurs="0"/>
-        <xs:element name="County" type="CountyEnum" minOccurs="0"/>
-        <xs:element name="Region" type="RegionEnum" minOccurs="0"/>
-        <xs:element name="Edition" type="TwoDigitNumber" minOccurs="0"/>
-        <xs:element name="ThumbnailURL" type="xs:anyURI" minOccurs="0"/>
-        <xs:element name="ObjectURL" type="xs:anyURI"/>
-        <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0"/>
-        <xs:element name="SourceType" type="xs:string" minOccurs="0"/>
-        <xs:element name="PlaceofPublication" type="xs:string"/>
+    <xs:element name="CollectionName" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The name of the collection to which this newspaper issue belongs.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Title" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The title of the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Publisher" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The publisher of the newspaper.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Rights" type="xs:anyURI" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>URI pointing to rights or copyright information for the issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Format" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The format of the newspaper issue (e.g., "PDF", "JPEG").</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Identifier" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>A unique identifier for the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="LCCNLink" type="xs:anyURI" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>Link to the Library of Congress Control Number (LCCN) record.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="LCCNNumber" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The Library of Congress Control Number (LCCN) assigned to the issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="KUDLAIPARKIdentifier" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>Identifier from the KUDLAIPARK system, if applicable.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="KDNPTitleCode" type="ThreeLowercaseLetters">
+      <xs:annotation>
+        <xs:documentation>A three-letter lowercase code representing the KDNP title.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="KDNPControlIdentifier" type="KDNPControlIdentifierType">
+      <xs:annotation>
+        <xs:documentation>A 13-character identifier with 3 lowercase letters followed by 10 digits.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Partners" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>Names of partners involved with the newspaper issue, if any.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Funders" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>Names of funding organizations or individuals, if any.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Pages" type="xs:positiveInteger">
+      <xs:annotation>
+        <xs:documentation>The total number of pages in the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Day" type="TwoDigitNumber">
+      <xs:annotation>
+        <xs:documentation>The day of the issue date, as a two-digit number.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Month" type="TwoDigitNumber">
+      <xs:annotation>
+        <xs:documentation>The month of the issue date, as a two-digit number.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Year" type="FourDigitYear">
+      <xs:annotation>
+        <xs:documentation>The year of the issue date, as a four-digit number.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="IssueDate" type="xs:date">
+      <xs:annotation>
+        <xs:documentation>The full date of the newspaper issue in YYYY-MM-DD format.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The digital publication year, if different from the issue year.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Decade" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The decade during which the issue was published (e.g., "1920s").</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="County" type="CountyEnum" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The Kentucky county related to the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Region" type="RegionEnum" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The Kentucky region related to the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Edition" type="TwoDigitNumber" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The edition number of the issue, as a two-digit number.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="ThumbnailURL" type="xs:anyURI" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>URL to a thumbnail image of the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="ObjectURL" type="xs:anyURI">
+      <xs:annotation>
+        <xs:documentation>URL to the main digital object of the newspaper issue.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>URL to the full text of the newspaper issue, if available.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="SourceType" type="xs:string" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>The type of source (e.g., "Microfilm", "Digital").</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
+    <xs:element name="PlaceofPublication" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The place where the newspaper was published.</xs:documentation>
+      </xs:annotation>
+    </xs:element>
+
 
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
 </xs:schema>
+
