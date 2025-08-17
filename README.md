@@ -33,7 +33,7 @@ Validate KDNP XML files describing newspaper issues against this schema to ensur
 
 This Python script validates multiple XML files in a directory against a specified XSD (XML Schema Definition) file using the lxml library. It logs any validation or parsing errors into a log file.
 
-📁 File Structure and Paths
+## 📁 File Structure and Paths
 
 XSD Schema File
 XSD_PATH
@@ -55,7 +55,7 @@ Path where validation errors (if any) are written.
 
 LOG_FILE = r"C:\Users\eweig\PaperVault\MetadataDictionary\validation_errors.log"
 
-🛠️ Function: validate_xml_files(xsd_path, xml_dir, log_file)
+## 🛠️ Function: validate_xml_files(xsd_path, xml_dir, log_file)
 Description:
 
 Validates each .xml file found in the provided directory (and subdirectories) against the provided XSD schema.
@@ -87,17 +87,17 @@ File: C:\path\to\file.xml
 File: C:\path\to\another_file.xml
   Parsing error: Premature end of data in tag book line 3
 
-✅ Success Message
+## ✅ Success Message
 
 If all XML files pass validation, the log will contain:
 
 All XML files validated successfully.
 
-▶️ Execution
+## ▶️ Execution
 
 To run the script directly:
 
-python validate_xml.py
+python kdanp_meta_validate_xsd.py
 
 
 Make sure this block is at the bottom of the file:
@@ -105,7 +105,7 @@ Make sure this block is at the bottom of the file:
 if __name__ == "__main__":
     validate_xml_files(XSD_PATH, XML_DIR, LOG_FILE)
 
-🧩 Dependencies
+## 🧩 Dependencies
 
 Python 3.x
 
