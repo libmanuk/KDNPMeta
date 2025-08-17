@@ -35,25 +35,15 @@ This Python script validates multiple XML files in a directory against a specifi
 
 ## 📁 File Structure and Paths
 
-XSD Schema File
-XSD_PATH
-Path to the .xsd file used to validate XML files.
-
-XSD_PATH = r"C:\Users\eweig\PaperVault\MetadataDictionary\kdnp_meta_dictionary.xsd"
-
-
-XML Files Directory
-XML_DIR
-Directory containing XML files to be validated.
-
-XML_DIR = r"C:\Users\eweig\PaperVault\MetadataDictionary\testmeta"
-
-
-Validation Log File
-LOG_FILE
-Path where validation errors (if any) are written.
-
-LOG_FILE = r"C:\Users\eweig\PaperVault\MetadataDictionary\validation_errors.log"
+- XSD Schema File
+- XSD_PATH
+- Path to the .xsd file used to validate XML files.
+- XML Files Directory
+- XML_DIR
+- Directory containing XML files to be validated.
+- Validation Log File
+- LOG_FILE
+- Path where validation errors (if any) are written.
 
 ## 🛠️ Function: validate_xml_files(xsd_path, xml_dir, log_file)
 Description:
@@ -62,24 +52,24 @@ Validates each .xml file found in the provided directory (and subdirectories) ag
 
 Steps:
 
-Load XSD schema using lxml.etree.XMLSchema.
+- Load XSD schema using lxml.etree.XMLSchema.
 
-Traverse the XML directory using os.walk.
+- Traverse the XML directory using os.walk.
 
-Parse and validate each .xml file:
+- Parse and validate each .xml file:
 
-If validation fails, the schema error log is captured.
+-- If validation fails, the schema error log is captured.
 
-If parsing fails, the exception message is recorded.
+-- If parsing fails, the exception message is recorded.
 
-Write results to log file:
+- Write results to log file:
 
-If errors are found, they are written to the specified log file.
+-- If errors are found, they are written to the specified log file.
 
-If no errors are found, a success message is logged.
+-- If no errors are found, a success message is logged.
 
 Example Output in Log File:
-XML Validation Errors:
+- XML Validation Errors:
 
 File: C:\path\to\file.xml
   Line 15: Element 'title': This element is not expected. Expected is ( name ).
@@ -91,7 +81,7 @@ File: C:\path\to\another_file.xml
 
 If all XML files pass validation, the log will contain:
 
-All XML files validated successfully.
+- All XML files validated successfully.
 
 ## ▶️ Execution
 
@@ -107,18 +97,11 @@ if __name__ == "__main__":
 
 ## 🧩 Dependencies
 
-Python 3.x
+- Python 3.x
+- lxml package (Install with: pip install lxml)
 
-lxml package
+## 🔐 Notes
 
-Install with:
-
-pip install lxml
-
-🔐 Notes
-
-File paths are Windows-specific (using raw strings r"...").
-
-Ensure the XSD file is well-formed, or schema loading will fail.
-
-XML parsing errors (e.g., malformed XML) are caught and logged.
+- File paths are Windows-specific (using raw strings r"...").
+- Ensure the XSD file is well-formed, or schema loading will fail.
+- XML parsing errors (e.g., malformed XML) are caught and logged.
