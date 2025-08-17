@@ -19,7 +19,7 @@ This repository contains the XML Schema Definition (XSD) for validating **Kentuc
 
 ## Usage
 
-Validate your XML files describing newspaper issues against this schema to ensure data consistency and integrity.
+Validate KDNP XML files describing newspaper issues against this schema to ensure data consistency and integrity.
 
 ## Schema Details
 
