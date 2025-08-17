@@ -33,7 +33,7 @@ Validate KDNP XML files describing newspaper issues against this schema to ensur
 
 This Python script validates multiple XML files in a directory against a specified XSD (XML Schema Definition) file using the lxml library. It logs any validation or parsing errors into a log file.
 
-e and Paths
+📁 File Structure and Paths
 
 XSD Schema File
 XSD_PATH
