@@ -58,15 +58,15 @@ Steps:
 
 - Parse and validate each .xml file:
 
--- If validation fails, the schema error log is captured.
+  - If validation fails, the schema error log is captured.
 
--- If parsing fails, the exception message is recorded.
+  - If parsing fails, the exception message is recorded.
 
 - Write results to log file:
 
--- If errors are found, they are written to the specified log file.
+  - If errors are found, they are written to the specified log file.
 
--- If no errors are found, a success message is logged.
+  - If no errors are found, a success message is logged.
 
 Example Output in Log File:
 - XML Validation Errors:
