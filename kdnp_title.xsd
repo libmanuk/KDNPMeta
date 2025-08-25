@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.kdnp.org/metadata"
+           xmlns="http://www.kdnp.org/metadata"
+           elementFormDefault="qualified">
+
+  <!-- Root Element -->
+  <xs:element name="newspapertitle">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- Collection Name -->
+        <xs:element name="CollectionName" type="xs:string"/>
+
+        <!-- Newspaper Title -->
+        <xs:element name="Title" type="xs:string"/>
+
+        <!-- Publisher Name -->
+        <xs:element name="Publisher" type="xs:string"/>
+
+        <!-- Library of Congress Control Number -->
+        <xs:element name="LCCNNumber" type="xs:string"/>
+
+        <!-- Unique KDNP Title Code -->
+        <xs:element name="KDNPTitleCode" type="xs:string"/>
+
+        <!-- County where published -->
+        <xs:element name="County" type="xs:string"/>
+
+        <!-- Geographic Region -->
+        <xs:element name="Region" type="xs:string"/>
+
+        <!-- Place of Publication (e.g., city/town) -->
+        <xs:element name="PlaceOfPublication" type="xs:string"/>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
