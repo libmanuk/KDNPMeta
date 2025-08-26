@@ -18,6 +18,9 @@
         <!-- Publisher Name -->
         <xs:element name="Publisher" type="xs:string"/>
 
+        <!-- Language -->
+        <xs:element name="Language" type="xs:string"/>
+
         <!-- Library of Congress Control Number -->
         <xs:element name="LCCNNumber" type="xs:string"/>
 
