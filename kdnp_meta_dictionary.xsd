@@ -38,7 +38,7 @@
       <xs:enumeration value="Knobs Arc"/>
       <xs:enumeration value="Pennyrile"/>
       <xs:enumeration value="Jackson Purchase"/>
-      <xs:enumeration value="Western CoalField"/>
+      <xs:enumeration value="Western Coalfield"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -364,4 +364,5 @@
   </xs:element>
 
 </xs:schema>
+
 
