@@ -35,10 +35,10 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="Eastern Mountain Coal Fields"/>
       <xs:enumeration value="Bluegrass"/>
-      <xs:enumeration value="Knobs"/>
+      <xs:enumeration value="Knobs Arc"/>
       <xs:enumeration value="Pennyrile"/>
       <xs:enumeration value="Jackson Purchase"/>
-      <xs:enumeration value="Western Coal Fields"/>
+      <xs:enumeration value="Western CoalField"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -364,3 +364,4 @@
   </xs:element>
 
 </xs:schema>
+
