@@ -7,13 +7,11 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:element name="FormatType">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Newspaper issue"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
+  <xs:simpleType name="FormatType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Newspaper issue"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="TwoDigitNumber">
     <xs:restriction base="xs:string">
@@ -288,7 +286,7 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="Decade" type="xs:string" minOccurs="0" minOccurs="1">
+    <xs:element name="Decade" type="xs:string" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The decade during which the issue was published (e.g., "1920s").</xs:documentation>
       </xs:annotation>
@@ -324,7 +322,7 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="0" minOccurs="1">
+    <xs:element name="FullTextURL" type="xs:anyURI" minOccurs="1">
       <xs:annotation>
         <xs:documentation>URL to the full text of the newspaper issue, if available.</xs:documentation>
       </xs:annotation>
@@ -366,4 +364,3 @@
   </xs:element>
 
 </xs:schema>
-
