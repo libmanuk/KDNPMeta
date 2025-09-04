@@ -170,7 +170,7 @@
   <!-- Root element -->
   <xs:element name="newspaperissue">
     <xs:complexType>
-      <xs:sequence>
+      <xs:all>
 
     <xs:element name="CollectionName" type="xs:string" minOccurs="1">
       <xs:annotation>
@@ -359,10 +359,11 @@
     </xs:element>
 
 
-      </xs:sequence>
+      </xs:all>
     </xs:complexType>
   </xs:element>
 
 </xs:schema>
+
 
 
