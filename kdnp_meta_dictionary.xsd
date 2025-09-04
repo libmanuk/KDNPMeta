@@ -282,7 +282,7 @@
       </xs:annotation>
     </xs:element>
 
-    <xs:element name="DigitalDate" type="xs:gYear" minOccurs="0" minOccurs="1">
+    <xs:element name="DigitalDate" type="xs:gYear" minOccurs="1">
       <xs:annotation>
         <xs:documentation>The digital publication year, if different from the issue year.</xs:documentation>
       </xs:annotation>
@@ -366,3 +366,4 @@
   </xs:element>
 
 </xs:schema>
+
