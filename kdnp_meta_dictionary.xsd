@@ -33,7 +33,7 @@
 
   <xs:simpleType name="RegionEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Eastern Mountain Coal Fields"/>
+      <xs:enumeration value="Eastern Coalfield"/>
       <xs:enumeration value="Bluegrass"/>
       <xs:enumeration value="Knobs Arc"/>
       <xs:enumeration value="Pennyrile"/>
@@ -364,6 +364,7 @@
   </xs:element>
 
 </xs:schema>
+
 
 
 
