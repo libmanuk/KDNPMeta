@@ -12,6 +12,12 @@
       <xs:enumeration value="Newspaper issue"/>
     </xs:restriction>
   </xs:simpleType>
+  
+  <xs:simpleType name="ISO6391List">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{2}(, [a-z]{2})*"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="TwoDigitNumber">
     <xs:restriction base="xs:string">
@@ -207,6 +213,12 @@
         <xs:documentation>A unique identifier for the newspaper issue.</xs:documentation>
       </xs:annotation>
     </xs:element>
+    
+    <xs:element name="Language" type="ISO6391List" minOccurs="0">
+      <xs:annotation>
+        <xs:documentation>One or more ISO 639-1 language codes (2-letter), separated by ", " (e.g., "en, fr").</xs:documentation>
+      </xs:annotation>
+    </xs:element>
 
     <xs:element name="LCCNLink" type="xs:anyURI" minOccurs="0">
       <xs:annotation>
@@ -364,7 +376,3 @@
   </xs:element>
 
 </xs:schema>
-
-
-
-
