@@ -42,6 +42,7 @@
       <xs:enumeration value="Eastern Coalfield"/>
       <xs:enumeration value="Bluegrass"/>
       <xs:enumeration value="Knobs Arc"/>
+      <xs:enumeration value="Manhattan"/>
       <xs:enumeration value="Pennyrile"/>
       <xs:enumeration value="Jackson Purchase"/>
       <xs:enumeration value="Western Coalfield"/>
@@ -55,6 +56,7 @@
       <xs:enumeration value="Allen"/>
       <xs:enumeration value="Anderson"/>
       <xs:enumeration value="Ballard"/>
+      <xs:enumeration value="Barren"/>
       <xs:enumeration value="Bath"/>
       <xs:enumeration value="Bell"/>
       <xs:enumeration value="Boone"/>
@@ -140,6 +142,7 @@
       <xs:enumeration value="Morgan"/>
       <xs:enumeration value="Muhlenberg"/>
       <xs:enumeration value="Nelson"/>
+      <xs:enumeration value="New York"/>
       <xs:enumeration value="Nicholas"/>
       <xs:enumeration value="Ohio"/>
       <xs:enumeration value="Oldham"/>
@@ -376,3 +379,4 @@
   </xs:element>
 
 </xs:schema>
+
